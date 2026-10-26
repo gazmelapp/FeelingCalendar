@@ -1,6 +1,6 @@
 (() => {
   "use strict";
-  const MOODS = { 1: "😢", 2: "🙁", 3: "😐", 4: "🙂", 5: "😄" };
+  const MOOD_CLASSES = { 1: "face-1", 2: "face-2", 3: "face-3", 4: "face-4", 5: "face-5" };
   const MOOD_NAMES = { 1: "とても悪い", 2: "悪い", 3: "普通", 4: "良い", 5: "とても良い" };
   const STORAGE_KEY = "mood-calendar-records-v1";
   const $ = (id) => document.getElementById(id);
@@ -58,7 +58,7 @@
       btn.append(number);
       const mood = document.createElement("span");
       mood.className = "day-mood";
-      mood.textContent = rec ? MOODS[rec.mood] : "";
+      if (rec) { const face = document.createElement("span"); face.className = `face ${MOOD_CLASSES[rec.mood] || "face-3"}`; face.setAttribute("aria-hidden", "true"); mood.append(face); }
       btn.append(mood);
       btn.addEventListener("click", () => {
         selectedDate = key;

@@ -7,8 +7,8 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f7f4ee",
-  "theme_color": "#f7f4ee",
+  "background_color": "#fff8fb",
+  "theme_color": "#fff8fb",
   "icons": [
     { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
   ]
