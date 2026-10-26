@@ -58,7 +58,7 @@
       btn.append(number);
       const mood = document.createElement("span");
       mood.className = "day-mood";
-      if (rec) { const face = document.createElement("span"); face.className = `face ${MOOD_CLASSES[rec.mood] || "face-3"}`; face.setAttribute("aria-hidden", "true"); mood.append(face); }
+      if (rec) { const face = document.createElement("img"); face.className = `face ${MOOD_CLASSES[rec.mood] || "face-3"}`; face.src = `./mood-${Number(rec.mood) || 3}.svg`; face.alt = ""; face.setAttribute("aria-hidden", "true"); mood.append(face); }
       btn.append(mood);
       btn.addEventListener("click", () => {
         selectedDate = key;

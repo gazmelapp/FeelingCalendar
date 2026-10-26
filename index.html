@@ -7,6 +7,7 @@
   <meta name="description" content="毎日の気分を5段階の顔マークと一言メモで記録する、オフライン対応の気分カレンダー">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
   <title>気分カレンダー</title>
 </head>
@@ -30,7 +31,7 @@
         <span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span>
       </div>
       <div id="calendarGrid" class="calendar-grid"></div>
-      <div class="legend"><span>気分：</span><span class="legend-item"><i class="face face-5" aria-hidden="true"></i>最高</span><span class="legend-item"><i class="face face-4" aria-hidden="true"></i>良い</span><span class="legend-item"><i class="face face-3" aria-hidden="true"></i>普通</span><span class="legend-item"><i class="face face-2" aria-hidden="true"></i>悪い</span><span class="legend-item"><i class="face face-1" aria-hidden="true"></i>つらい</span></div>
+      <div class="legend"><span>気分：</span><span class="legend-item"><img class="face face-5" src="./mood-5.svg" alt="">最高</span><span class="legend-item"><img class="face face-4" src="./mood-4.svg" alt="">良い</span><span class="legend-item"><img class="face face-3" src="./mood-3.svg" alt="">普通</span><span class="legend-item"><img class="face face-2" src="./mood-2.svg" alt="">悪い</span><span class="legend-item"><img class="face face-1" src="./mood-1.svg" alt="">つらい</span></div>
     </section>
 
     <section class="entry-panel" aria-labelledby="entryTitle">
@@ -43,11 +44,11 @@
       </div>
       <p class="field-label">今日はどんな気分でしたか？</p>
       <div class="mood-options" role="group" aria-label="気分を5段階から選択">
-        <button class="mood-btn mood-1" data-mood="1" type="button" aria-label="とても悪い"><span class="face face-1" aria-hidden="true"></span><small>つらい</small></button>
-        <button class="mood-btn mood-2" data-mood="2" type="button" aria-label="悪い"><span class="face face-2" aria-hidden="true"></span><small>いまいち</small></button>
-        <button class="mood-btn mood-3" data-mood="3" type="button" aria-label="普通"><span class="face face-3" aria-hidden="true"></span><small>ふつう</small></button>
-        <button class="mood-btn mood-4" data-mood="4" type="button" aria-label="良い"><span class="face face-4" aria-hidden="true"></span><small>よい</small></button>
-        <button class="mood-btn mood-5" data-mood="5" type="button" aria-label="とても良い"><span class="face face-5" aria-hidden="true"></span><small>最高</small></button>
+        <button class="mood-btn mood-1" data-mood="1" type="button" aria-label="とても悪い"><img class="face face-1" src="./mood-1.svg" alt=""><small>つらい</small></button>
+        <button class="mood-btn mood-2" data-mood="2" type="button" aria-label="悪い"><img class="face face-2" src="./mood-2.svg" alt=""><small>いまいち</small></button>
+        <button class="mood-btn mood-3" data-mood="3" type="button" aria-label="普通"><img class="face face-3" src="./mood-3.svg" alt=""><small>ふつう</small></button>
+        <button class="mood-btn mood-4" data-mood="4" type="button" aria-label="良い"><img class="face face-4" src="./mood-4.svg" alt=""><small>よい</small></button>
+        <button class="mood-btn mood-5" data-mood="5" type="button" aria-label="とても良い"><img class="face face-5" src="./mood-5.svg" alt=""><small>最高</small></button>
       </div>
       <label class="field-label" for="noteInput">一言メモ <span class="optional">任意</span></label>
       <textarea id="noteInput" rows="3" maxlength="300" placeholder="今日あったこと、感じたことなど…"></textarea>

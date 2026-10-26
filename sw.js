@@ -1,5 +1,5 @@
-const CACHE_NAME = "mood-calendar-v2";
-const APP_FILES = ["./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest", "./icon.svg"];
+const CACHE_NAME = "mood-calendar-v5";
+const APP_FILES = ["./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest", "./icon.svg", "./icon-192.png", "./icon-512.png", "./apple-touch-icon.png", "./mood-1.svg", "./mood-2.svg", "./mood-3.svg", "./mood-4.svg", "./mood-5.svg"];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES)).then(() => self.skipWaiting()));
 });

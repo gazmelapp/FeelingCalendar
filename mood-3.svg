@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="気分の顔アイコン">
+  <defs><linearGradient id="g" x1="0" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#ffdf72" stop-opacity="0"/></linearGradient></defs>
+  <path d="M50 8 C74 6 91 24 92 48 C94 72 77 91 53 93 C29 95 9 77 8 53 C6 29 25 10 50 8Z" fill="#ffdf72"/>
+  <path d="M50 8 C74 6 91 24 92 48 C94 72 77 91 53 93 C29 95 9 77 8 53 C6 29 25 10 50 8Z" fill="url(#g)"/>
+  <ellipse cx="35" cy="40" rx="3.5" ry="5" fill="#34435f"/><ellipse cx="65" cy="40" rx="3.5" ry="5" fill="#34435f"/>
+  <ellipse cx="26" cy="56" rx="7" ry="4" fill="#fff" opacity=".22"/><ellipse cx="74" cy="56" rx="7" ry="4" fill="#fff" opacity=".22"/>
+  <path d="M39 59 H61" fill="none" stroke="#34435f" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="25" cy="24" r="4" fill="#fff" opacity=".45"/>
+</svg>
