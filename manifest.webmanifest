@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "気分カレンダー",
+  "short_name": "気分カレンダー",
+  "description": "毎日の気分を5段階の顔マークと一言メモで記録するオフライン対応アプリ",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#f7f4ee",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
