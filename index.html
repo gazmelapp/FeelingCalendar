@@ -15,7 +15,6 @@
   <main class="app">
     <header class="topbar">
       <div>
-        <p class="eyebrow">MY DAILY JOURNAL</p>
         <h1><span class="title-cloud" aria-hidden="true">☁</span> 気分カレンダー</h1>
       </div>
       <button id="todayBtn" class="quiet-btn" type="button">今日へ</button>
@@ -33,12 +32,13 @@
       <div id="calendarGrid" class="calendar-grid"></div>
     </section>
 
+    <dialog id="entryDialog" class="entry-dialog" aria-labelledby="entryTitle">
     <section class="entry-panel" aria-labelledby="entryTitle">
       <div class="entry-heading">
         <div>
-          <p class="eyebrow">DAILY CHECK-IN</p>
           <h2 id="entryTitle">今日の気分</h2>
         </div>
+        <button id="closeEntryBtn" class="close-entry-btn" type="button" aria-label="閉じる">×</button>
         <span id="savedBadge" class="saved-badge" hidden>保存済み</span>
       </div>
       <p class="field-label">今日はどんな気分でしたか？</p>
@@ -57,18 +57,7 @@
       </div>
       <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
     </section>
-
-    <footer>
-      <button id="installHelpBtn" class="text-btn" type="button">ホーム画面への追加方法</button>
-      <div id="installHelp" class="install-help" hidden>
-        <p><strong>iPhone（Safari）での追加手順</strong></p>
-        <ol>
-          <li>Safariでこのアプリを開きます。</li>
-          <li>共有ボタン（四角から上向き矢印）をタップします。</li>
-          <li>「ホーム画面に追加」を選び、追加します。</li>
-        </ol>
-      </div>
-    </footer>
+    </dialog>
   </main>
   <script src="./app.js"></script>
 </body>

@@ -66,6 +66,7 @@
         viewMonth = d.getMonth();
         renderCalendar();
         loadSelectedRecord();
+        if (!$ ("entryDialog").open) $("entryDialog").showModal();
       });
       grid.append(btn);
     }
@@ -125,18 +126,19 @@
       $("statusMessage").textContent = "削除を保存できませんでした。";
     }
   });
+  $("closeEntryBtn").addEventListener("click", () => $("entryDialog").close());
+  $("entryDialog").addEventListener("click", (event) => { if (event.target === $("entryDialog")) $("entryDialog").close(); });
   $("prevMonth").addEventListener("click", () => moveMonth(-1));
   $("nextMonth").addEventListener("click", () => moveMonth(1));
   $("todayBtn").addEventListener("click", () => {
     viewYear = today.getFullYear(); viewMonth = today.getMonth(); selectedDate = dateKey(today);
     renderCalendar(); loadSelectedRecord();
-  });
-  $("installHelpBtn").addEventListener("click", () => {
-    $("installHelp").hidden = !$("installHelp").hidden;
+    $("entryDialog").showModal();
   });
   if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
     window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
   }
   renderCalendar();
   loadSelectedRecord();
+  $("entryDialog").close();
 })();
