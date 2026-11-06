@@ -60,6 +60,13 @@
       mood.className = "day-mood";
       if (rec) { const face = document.createElement("img"); face.className = `face ${MOOD_CLASSES[rec.mood] || "face-3"}`; face.src = `./mood-${Number(rec.mood) || 3}.svg`; face.alt = ""; face.setAttribute("aria-hidden", "true"); mood.append(face); }
       btn.append(mood);
+      if (rec && typeof rec.note === "string" && rec.note.trim().length > 0) {
+        const noteDot = document.createElement("span");
+        noteDot.className = "note-dot";
+        noteDot.setAttribute("aria-label", "一言メモあり");
+        noteDot.title = "一言メモあり";
+        btn.append(noteDot);
+      }
       btn.addEventListener("click", () => {
         selectedDate = key;
         viewYear = d.getFullYear();
@@ -111,6 +118,7 @@
     if (persist()) {
       $("deleteBtn").hidden = false;
       renderCalendar();
+      $("entryDialog").close();
     }
   });
   $("deleteBtn").addEventListener("click", () => {
