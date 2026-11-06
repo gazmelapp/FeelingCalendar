@@ -32,6 +32,14 @@
       <div id="calendarGrid" class="calendar-grid"></div>
     </section>
 
+    <section class="trend-panel" aria-labelledby="trendTitle">
+      <div class="trend-heading"><div><h2 id="trendTitle">月ごとの気分の推移</h2><p class="trend-subtitle">日々の記録から月平均を表示します</p></div></div>
+      <div class="trend-summary" id="trendSummary">月平均を計算しています</div>
+      <div class="chart-wrap"><svg id="moodChart" class="mood-chart" viewBox="0 0 600 250" role="img" aria-label="月ごとの気分平均の折れ線グラフ"></svg></div>
+      <p class="chart-help">過去の月の点をタップすると、一時的な管理用の月平均値を登録できます。</p>
+      <div class="chart-legend"><span><i class="legend-line"></i>日々の記録から計算</span><span><i class="legend-manual"></i>手動登録値</span></div>
+    </section>
+
     <dialog id="entryDialog" class="entry-dialog" aria-labelledby="entryTitle">
     <section class="entry-panel" aria-labelledby="entryTitle">
       <div class="entry-heading">
@@ -57,6 +65,17 @@
       </div>
       <p id="statusMessage" class="status-message" role="status" aria-live="polite"></p>
     </section>
+    </dialog>
+    <dialog id="monthlyValueDialog" class="entry-dialog monthly-value-dialog" aria-labelledby="monthlyValueTitle">
+      <section class="entry-panel">
+        <div class="entry-heading"><h2 id="monthlyValueTitle">月平均の登録</h2><button id="closeMonthlyBtn" class="close-entry-btn" type="button" aria-label="閉じる">×</button></div>
+        <p id="monthlyValueDescription" class="field-label">月の値を入力してください</p>
+        <label class="field-label" for="monthlyValueInput">月平均（-2.0〜2.0）</label>
+        <input id="monthlyValueInput" class="monthly-value-input" type="number" min="-2" max="2" step="0.1" inputmode="decimal">
+        <p class="chart-help">この値は日々の記録とは別に保存され、グラフでは手動登録値として表示されます。日々の記録は変更されません。</p>
+        <div class="entry-actions"><button id="saveMonthlyBtn" class="primary-btn" type="button">月平均を登録</button><button id="deleteMonthlyBtn" class="delete-btn" type="button">手動登録を解除</button></div>
+        <p id="monthlyStatus" class="status-message" role="status"></p>
+      </section>
     </dialog>
   </main>
   <script src="./app.js"></script>
